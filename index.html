@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Конференция</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+  </head>
+  <body>
+    <section class="hero is-warning ">
+      <div class="hero-body">
+        <div class="container has-text-centered">
+          <p class="title">
+            //add2cal
+          </p>
+          <p class="subtitle">
+            Простое приложение для быстрого добавления конференций в календарь
+          </p>
+        </div>
+      </div>
+
+      <div class="hero-foot">
+        <nav class="tabs is-boxed is-fullwidth">
+          <div class="container">
+            <ul>
+              <li>
+                <a href="create.html">Создать</a>
+              </li>
+              <li class="is-active has-text-primary-light">
+                <a>Конференция</a>
+              </li>
+              <li>
+                <a href="info.html">Информация</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </section>
+
+    <div id="MeetingContainer" class="columns my-1">
+      <div class="column is-5 is-offset-1 p-0">
+        <div class="card">
+          <div class="BGandTAD">
+            <div class="BGandTAD-text">
+              <p id="TimeElement" class="has-text-weight-bold is-size-3"></p>
+              <p id="DateElement" class="has-text-weight-bold is-size-5"></p>
+            </div>
+          </div>
+          <div class="card-content">
+            <p class="is-size-3 card-header-title pt-0" id="TElement"></p>
+            <p>Конференция добавится в один из выбранных календарей с автоматическим добавлением названия, времени, ссылки и пр.</p>
+          </div>
+          <footer class="card-footer">
+            <button onclick="AddToGoogleCalendar()" class="button is-medium is-warning card-footer-item mx-1 my-1">Google</button>
+            <button onclick="AddToICal()" class="button is-medium is-warning card-footer-item my-1" disabled>Apple</button>
+            <button onclick="AddToICal()" class="button is-medium is-warning card-footer-item mx-1 my-1">Outlook</button>
+          </footer>
+        </div>
+      </div>
+
+      <div class="column is-5 right-column">
+        <button onclick="copyZoomLinkToClipboard()" class="button is-ghost copyButtonForLink">📄</button>
+        <div id="right-column-text">
+          <p id="TADElement"></p>
+          <p>Подключиться к конференции Zoom</p>
+          <p id="LinkElement"></p>
+          <p id="FHElement"></p>
+          <p id="SHElement"></p>
+          <p id="MIDElement"></p>
+          <p id="PElement"></p>
+        </div>
+
+      </div>
+    </div>
+
+    <div id="WarningContainer" class="container my-1 px-1">
+      <p class="has-text-weight-bold is-size-4 has-text-centered">Не хватает данных в URL для создания ссылки 😥</p>
+      <p>Если URL не содержит переменных - просто нужно перейти по тому адрессу который отпраляли изначально и все заработает.</p>
+      <hr>
+      <p>В случае присутствия в URL переменных T, TAD, D, FH, SH, MID, P и Dur, но в наличия биттых данных внутри - сообщи, пожалуйста, человеку, который отправил тебе эту ссылку. <hr>При нехватке какой-то переменной в URL или другой ошибке - можно сделать issue или связаться со мной, контакты есть на вкладке "Информация"</p>
+    </div>
+
+
+
+
+
+    <script src="js/main.js" type="text/javascript"></script>
+
+  </body>
+</html>

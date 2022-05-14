@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Создать</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+  </head>
+  <body>
+    <section class="hero is-warning ">
+      <div class="hero-body">
+        <div class="container has-text-centered">
+          <p class="title">
+            //add2cal
+          </p>
+          <p class="subtitle">
+            Простое приложение для быстрого добавления конференций в календарь
+          </p>
+        </div>
+      </div>
+
+      <div class="hero-foot">
+        <nav class="tabs is-boxed is-fullwidth">
+          <div class="container">
+            <ul>
+              <li class="is-active has-text-primary-light">
+                <a>Создать</a>
+              </li>
+              <li>
+                <a href="index.html">Конференция</a>
+              </li>
+              <li>
+                <a href="info.html">Информация</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </section>
+
+    <div class="container my-1 px-1">
+      <input id="ZoomTitle" class="input is-warning" type="text" placeholder="Meeting Title">
+
+      <textarea id="ZoomLink" class="textarea is-warning has-fixed-size mt-1" rows="5" placeholder="Время: 12 дек. 2012 12:12 AM Москва&#10;Подключиться к конференции Zoom&#10;https://zoom.us/j/0123456789?pwd=01234567891011121314151617181920&#10;Идентификатор конференции: 000 0000 0000&#10;Код доступа: 000000"></textarea>
+      
+      <div class="field is-grouped mt-2">
+        <div class="control">
+          <button onclick="create()" class="button is-warning">Создать</button>
+        </div>
+        <div class="control">
+          <button onclick="cancel()" class="button is-warning is-light">Отменить</button>
+        </div>
+        <div class="select is-warning">
+          <select id="DurationSelect">
+            <option>30 минут</option>
+            <option>60 минут</option>
+            <option>90 минут</option>
+            <option>120 минут</option>
+          </select>
+        </div>
+      </div>
+      
+    </div>
+    
+    <article id="InfoMessageBox" class="message">
+      <div class="message-body">
+        <p id="InfoMessageBoxText"></p>
+      </div>
+    </article>
+
+    <script src="js/create.js" type="text/javascript"></script>
+
+  </body>
+</html>

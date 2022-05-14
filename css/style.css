@@ -1,0 +1,36 @@
+body {
+  height: 100vh ;
+}
+
+hr {
+  margin: 0.5rem 0;
+}
+
+#InfoMessageBox{ 
+  position: fixed;
+  bottom: 0;
+}
+
+.BGandTAD{
+  height: 15rem;
+  background-image: url(../images/bg-1.jpg);
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center
+}
+
+.copyButtonForLink{
+  position: absolute;
+  top: 2px;
+  right: 2px;
+}
+
+.copyButtonForLink:hover{
+  box-shadow: 0 0 0 0.125em #ffedaa;
+}
+
+.right-column{
+  position: relative
+}
